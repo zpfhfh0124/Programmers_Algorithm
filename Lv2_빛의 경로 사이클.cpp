@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -10,7 +10,7 @@ using namespace std;
 #define Left(dir)  (dir+3)%DIRECTION_MAX
 #define Right(dir) (dir+1)%DIRECTION_MAX
 
-// »ó,ÁÂ,ÇÏ,¿ì ¼ø¼­
+// ìƒ,ì¢Œ,í•˜,ìš° ìˆœì„œ
 int directionX[DIRECTION_MAX] = { 0,-1,0,1 };
 int directionY[DIRECTION_MAX] = { -1,0,1,0 };
 
@@ -77,10 +77,10 @@ vector<int> solution(vector<string> grid) {
 
 int main()
 {
-    cout << "ÇàÀÇ °³¼ö ÀÔ·Â : ";
+    cout << "í–‰ì˜ ê°œìˆ˜ ì…ë ¥ : ";
     cin >> row;
 
-    cout << "¿­ÀÇ °³¼ö ÀÔ·Â : ";
+    cout << "ì—´ì˜ ê°œìˆ˜ ì…ë ¥ : ";
     cin >> col;
 
     int cnt = 0;
@@ -89,7 +89,7 @@ int main()
     vector<string> grid;
     while (cnt < row) 
     {
-        cout << "S,R,LÀÇ Á¶ÇÕÀ¸·Î ÀÔ·Â : ";
+        cout << "S,R,Lì˜ ì¡°í•©ìœ¼ë¡œ ì…ë ¥ : ";
         cin >> row_str;
 
         if (cnt > 0) {

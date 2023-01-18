@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -16,9 +16,9 @@ int solution(vector<vector<int>> triangle) {
     {
         for (int j = 0; j <= i; j++)
         {
-            // ÁÂÃø ÃÖ¿Ü°û
+            // ì¢Œì¸¡ ìµœì™¸ê³½
             if (j == 0) dp[i][j] = dp[i - 1][j] + triangle[i][j];
-            // ¿ìÃø ÃÖ¿Ü°û
+            // ìš°ì¸¡ ìµœì™¸ê³½
             else if (j == i) dp[i][j] = dp[i - 1][j - 1] + triangle[i][j];
             else dp[i][j] = max(dp[i - 1][j - 1], dp[i - 1][j]) + triangle[i][j];
             

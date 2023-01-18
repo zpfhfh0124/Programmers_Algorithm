@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 
@@ -51,7 +51,7 @@ int main()
     
     while (input_str != "0")
     {
-        cout << "¹®ÀÚ¿­ ÀÔ·Â. (0 ÀÔ·Â : ¹®ÀÚ¿­ ÀÔ·Â Á¾·á) ";
+        cout << "ë¬¸ìžì—´ ìž…ë ¥. (0 ìž…ë ¥ : ë¬¸ìžì—´ ìž…ë ¥ ì¢…ë£Œ) ";
         cin >> input_str;
 
         if (input_str == "0") break;
@@ -62,5 +62,5 @@ int main()
 
     int answer = solution(v_input_str);
     cout << endl;
-    cout << " °á°ú : " << answer;
+    cout << " ê²°ê³¼ : " << answer;
 }

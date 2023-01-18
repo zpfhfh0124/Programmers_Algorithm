@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 //#include <chrono>
@@ -9,7 +9,7 @@ using namespace std;
 
 string solution(int a, int b) {
     
-    vector<string> weekdays = { "ÀÏ","¿ù","È­","¼ö","¸ñ","±İ","Åä" };
+    vector<string> weekdays = { "ì¼","ì›”","í™”","ìˆ˜","ëª©","ê¸ˆ","í† " };
     int prev_year_lastday_idx = 4;
 
     map<int, int> month_lastdays;

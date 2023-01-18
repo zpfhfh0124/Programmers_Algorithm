@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<queue>
 using namespace std;
@@ -9,14 +9,14 @@ struct Pos
     int x;
 };
 
-// n : Çà / m : ¿­ [y][x]
+// n : í–‰ / m : ì—´ [y][x]
 int n, m;
 
 const int MAX = 100;
 bool isVisited[MAX][MAX] = {false};
 int dist[MAX][MAX] = {0};
 
-// »ó ÁÂ ÇÏ ¿ì
+// ìƒ ì¢Œ í•˜ ìš°
 const int DIR_MAX = 4;
 int directionX[DIR_MAX] = { 0, -1, 0, 1 };
 int directionY[DIR_MAX] = { -1, 0, 1, 0 };
@@ -42,27 +42,27 @@ int solution(vector<vector<int>> maps)
         int cur_x = pos.x;
         int cur_y = pos.y;
 
-        // 4¹æÇâ Å½»ö (»ó -> ÁÂ -> ÇÏ -> ¿ì)
+        // 4ë°©í–¥ íƒìƒ‰ (ìƒ -> ì¢Œ -> í•˜ -> ìš°)
         for (int i = 0; i < DIR_MAX; i++)
         {
             int next_x = cur_x + directionX[i];
             int next_y = cur_y + directionY[i];
 
-            // ¸Ê ¹üÀ§ ³»ÀÎÁö Ã¼Å©
+            // ë§µ ë²”ìœ„ ë‚´ì¸ì§€ ì²´í¬
             if (next_x < 0 || next_x >= m || next_y < 0 || next_y >= n) continue;
-            // º® Ã¼Å©
+            // ë²½ ì²´í¬
             if (maps[next_y][next_x] == 0) continue;
-            // ÀÌ¹Ì Ã¼Å©µÈ °÷
+            // ì´ë¯¸ ì²´í¬ëœ ê³³
             if (isVisited[next_y][next_x]) continue;
 
-            // Ã¼Å© ³¡³ª°í °¥ ¼ö ÀÖ´Â °÷ÀÌ¸é...
+            // ì²´í¬ ëë‚˜ê³  ê°ˆ ìˆ˜ ìˆëŠ” ê³³ì´ë©´...
             q_pos.push(Pos{ next_y, next_x });
             isVisited[next_y][next_x] = true;
             dist[next_y][next_x] = dist[cur_y][cur_x] + 1;
         }
     }
 
-    // µµÂøÁö Ã¼Å©
+    // ë„ì°©ì§€ ì²´í¬
     if (!isVisited[n - 1][m - 1]) answer = -1;
     else answer = dist[n - 1][m - 1];
    

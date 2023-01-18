@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<vector>
 #include<algorithm>
 #include<numeric>
@@ -9,15 +9,15 @@ int solution(vector<int> A, vector<int> B)
     int answer = 0;
     answer = inner_product(A.begin(), A.end(), B.begin(), 0);
 
-    //sort(A.begin(), A.end());   // ¿À¸§Â÷¼ø
-    //sort(B.rbegin(), B.rend()); // ³»¸²Â÷¼ø
+    //sort(A.begin(), A.end());   // ì˜¤ë¦„ì°¨ìˆœ
+    //sort(B.rbegin(), B.rend()); // ë‚´ë¦¼ì°¨ìˆœ
     //
     //for (int i = 0; i < A.size(); i++)
     //{
     //    answer += A[i] * B[i];
     //}
 
-    // [½ÇÇà] ¹öÆ°À» ´©¸£¸é Ãâ·Â °ªÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.
+    // [ì‹¤í–‰] ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ ì¶œë ¥ ê°’ì„ ë³¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
     cout << answer << endl;
 
     return answer;
@@ -26,15 +26,15 @@ int solution(vector<int> A, vector<int> B)
 int main()
 {
     int len = 0;
-    cout << "¹è¿­ ±æÀÌ : ";
+    cout << "ë°°ì—´ ê¸¸ì´ : ";
     cin >> len;
     vector<int> A(len);
     vector<int> B(len);
     for (int i = 0; i < len; i++)
     {
-        cout << "A ¹è¿­ÀÇ " << i << "¹øÂ° : ";
+        cout << "A ë°°ì—´ì˜ " << i << "ë²ˆì§¸ : ";
         cin >> A[i];
-        cout << "B ¹è¿­ÀÇ " << i << "¹øÂ° : ";
+        cout << "B ë°°ì—´ì˜ " << i << "ë²ˆì§¸ : ";
         cin >> B[i];
     }
 

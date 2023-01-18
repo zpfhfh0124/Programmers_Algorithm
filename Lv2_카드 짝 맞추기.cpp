@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 
@@ -25,7 +25,7 @@ int main()
     {
         for (int j = 0; j < colum; j++)
         {
-            cout << i << "Çà " << j << "¿­ : ";
+            cout << i << "í–‰ " << j << "ì—´ : ";
             cin >> idx;
             board[i][j] = idx;
         }
@@ -46,9 +46,9 @@ int main()
     bool isValid = false;
     while (!isValid)
     {
-        cout << "ÇöÀç Çà ÀÔ·Â :";
+        cout << "í˜„ìž¬ í–‰ ìž…ë ¥ :";
         cin >> curr_row;        
-        cout << "ÇöÀç ¿­ ÀÔ·Â :";
+        cout << "í˜„ìž¬ ì—´ ìž…ë ¥ :";
         cin >> curr_colum;
         isValid = (curr_row < row&& curr_colum < colum) ? true : false;
     }

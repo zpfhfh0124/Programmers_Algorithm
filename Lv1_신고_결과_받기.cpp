@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -25,21 +25,21 @@ vector<string> split(string sentence, char separator)
 
 vector<int> solution(vector<string> id_list, vector<string> report, int k) {
 
-    // id_listÀÇ ÀÎµ¦½º ÀúÀå¿ë map
+    // id_listì˜ ì¸ë±ìŠ¤ ì €ì¥ìš© map
     map<string, int> m_id_idx;
 
-    // id, report_id·Î ÇÑ ½ÖÀ» ¸¸µé¾î¼­ accused, reporters Çü½ÄÀÇ key, valueÀÇ mapÀ» »ı¼º
-    // value°¡ setÀÌ±â ¶§¹®¿¡ ÇÏ³ªÀÇ key¿¡ ¿©·¯ value¸¦ »ğÀÔÇÏ´Â °ÍÀÌ °¡´É
+    // id, report_idë¡œ í•œ ìŒì„ ë§Œë“¤ì–´ì„œ accused, reporters í˜•ì‹ì˜ key, valueì˜ mapì„ ìƒì„±
+    // valueê°€ setì´ê¸° ë•Œë¬¸ì— í•˜ë‚˜ì˜ keyì— ì—¬ëŸ¬ valueë¥¼ ì‚½ì…í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥
     map<string, set<string>> m_report;
 
-    // °¢ id¸¦ id_listÀÇ index ¼øÀ¸·Î map¿¡ ÀúÀå
+    // ê° idë¥¼ id_listì˜ index ìˆœìœ¼ë¡œ mapì— ì €ì¥
     for (int i = 0; i < id_list.size(); i++) {
         m_id_idx[id_list[i]] = i;
     }
 
     for (auto it = report.begin(); it != report.end(); it++)
     {
-        // ½Å°íÀÚ, ÇÇ½Å°íÀÚÀÇ ¹®ÀÚ¿­À» °ø¹é(" ") ´ÜÀ§·Î split
+        // ì‹ ê³ ì, í”¼ì‹ ê³ ìì˜ ë¬¸ìì—´ì„ ê³µë°±(" ") ë‹¨ìœ„ë¡œ split
         vector<string> v_report_case = split(*it, ' ');
         string reporter = v_report_case.front();
         string accused = v_report_case.back();
@@ -64,7 +64,7 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
 int main()
 {
     vector<string> _id_list;
-    cout << "¹®ÀÚ¿­ ´ÜÀ§·Î id¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ÀÔ·ÂÀ» Á¾·áÇÏ·Á¸é 0À» ÀÔ·Â" << endl;
+    cout << "ë¬¸ìì—´ ë‹¨ìœ„ë¡œ idë¥¼ ì…ë ¥í•˜ì„¸ìš”. ì…ë ¥ì„ ì¢…ë£Œí•˜ë ¤ë©´ 0ì„ ì…ë ¥" << endl;
     
     string input_str;
     while ( _id_list.size() <= 1000 )
@@ -93,15 +93,15 @@ int main()
     while ( _report_list.size() <= 200000 ) 
     {
         cnt++;
-        cout << cnt << "¹øÂ° ½Å°íÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. Á¾·áÇÏ¸é 0À» ÀÔ·Â" << endl;
+        cout << cnt << "ë²ˆì§¸ ì‹ ê³ ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. ì¢…ë£Œí•˜ë©´ 0ì„ ì…ë ¥" << endl;
         cin >> input_reporter;
 
-        // Á¾·á ·ÎÁ÷
+        // ì¢…ë£Œ ë¡œì§
         if (input_reporter == "0")
         {
             if (_report_list.size() >= 1)
             {
-                cout << "ÀÔ·Â Á¾·á" << endl;
+                cout << "ì…ë ¥ ì¢…ë£Œ" << endl;
                 break;
             }
             else 
@@ -111,7 +111,7 @@ int main()
             }
         }
 
-        cout << "ÇÇ½Å°íÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "í”¼ì‹ ê³ ìë¥¼ ì…ë ¥í•˜ì„¸ìš”." << endl;
         cin >> input_accused;
 
         bool isContain = false;
@@ -140,7 +140,7 @@ int main()
     }
 
     int k = 0;
-    cout << "½Å°í ±âÁØ È¸¼ö : ";
+    cout << "ì‹ ê³  ê¸°ì¤€ íšŒìˆ˜ : ";
     cin >> k;
 
     auto result = solution(_id_list, _report_list, k);

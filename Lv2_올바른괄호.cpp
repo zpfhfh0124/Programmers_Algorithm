@@ -1,4 +1,4 @@
-#include <string>
+ï»¿#include <string>
 #include <iostream>
 #include <vector>
 
@@ -26,7 +26,7 @@ bool solution(string s)
 
     if (!stack_Parentheses.empty()) answer = false;
 
-    // [½ÇÇà] ¹öÆ°À» ´©¸£¸é Ãâ·Â °ªÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.
+    // [ì‹¤í–‰] ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ ì¶œë ¥ ê°’ì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
     cout << "answer : " <<  answer << endl;
 
     return answer;
@@ -35,7 +35,7 @@ bool solution(string s)
 int main()
 {
     string s;
-    cout << "°ıÈ£ ÀÔ·Â : ";
+    cout << "ê´„í˜¸ ì…ë ¥ : ";
     cin >> s;
 
     solution(s);

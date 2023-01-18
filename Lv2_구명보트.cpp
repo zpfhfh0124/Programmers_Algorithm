@@ -1,4 +1,4 @@
-#include <string>
+ï»¿#include <string>
 #include <vector>
 #include <algorithm>
 
@@ -7,7 +7,7 @@ using namespace std;
 int solution(vector<int> people, int limit) {
     int answer = 0;
     int idx = 0;
-    sort(people.begin(), people.end()); // ¿À¸§Â÷¼ø Á¤·Ä    
+    sort(people.begin(), people.end()); // ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬    
     while (idx < people.size())
     {
         int remain = limit - *(people.end() - 1);

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 #include <map>
 using namespace std;
@@ -9,7 +9,7 @@ int solution(vector<int> nums)
     
     int select_amount = nums.size() / 2;
 
-    // Key : Á¾·ù¹øÈ£, Value : ¹è¿­ Index
+    // Key : ì¢…ë¥˜ë²ˆí˜¸, Value : ë°°ì—´ Index
     map<int, vector<int>> pokemons;
     
     for (int i = 0; i < nums.size(); i++)
