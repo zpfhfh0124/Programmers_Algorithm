@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <stack>
@@ -55,7 +55,7 @@ int solution(string s) {
     int len = s.length();
     for (int i = 0; i < len; i++)
     {
-        // °ýÈ£ ½ºÅÃ Ã¼Å©
+        // ê´„í˜¸ ìŠ¤íƒ ì²´í¬
         if(check(s).empty()) answer++;
         shift(s);
     } 
