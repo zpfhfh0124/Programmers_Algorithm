@@ -10,7 +10,7 @@ vector<int> solution(int n, long long left, long long right) {
     for (long long i = left; i <= right; i++) {
         int row = i / n;
         int colum = i % n + 1;
-        answer.push_back((row < colum) ? colum : row);
+        answer.push_back((row < colum) ? colum : row + 1);
     }
 
     return answer;
