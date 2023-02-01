@@ -7,16 +7,22 @@ using namespace std;
 
 long long solution(int n, vector<int> works) {
     long long answer = 0;
-    priority_queue<int> q_works;
+    priority_queue<int> q_works(works.begin(), works.end());
     
-    for (auto w : works) q_works.push(w);
-
-    for (int i = n; i > 0; i--) {
-        if (q_works.empty()) continue;
+    while (n > 0)
+    {
         int max = q_works.top();
-        answer += pow(max, 2);
+        if (max <= 0) break;
         q_works.pop();
-        if(max > 1) q_works.push(max - 1);
+        q_works.push(max - 1);
+        n--;
+    }
+
+    while (!q_works.empty())
+    {
+        int pow_work = pow(q_works.top(), 2);
+        answer += pow_work;
+        q_works.pop();
     }
 
     return answer;
