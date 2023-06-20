@@ -1,22 +1,22 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <set>
 #include <string>
 #include <algorithm>
 
 using namespace std;
 
-// ÀÚ¿¬¼ö n | d(n) : nÀÇ °¢ ÀÚ¸®¼ö¿Í nÀÇ ÇÕ -> nÀº d(n)ÀÇ Á¦³×·¹ÀÌÅÍ(generator)
-// Á¦³×·¹ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê´Â ¼ö : ¼¿ÇÁ ³Ñ¹ö (self - number) -> d(n)°ªÀ» °¡ÁöÁö ¾Ê´Â °Í
-// 1 ÀÌ»ó 5000 ¹Ì¸¸ÀÇ ¸ðµç ÀÚ¿¬¼ö Áß ¼¿ÇÁ ³Ñ¹öµéÀÇ ÇÕ ±¸ÇÏ±â
+// ìžì—°ìˆ˜ n | d(n) : nì˜ ê° ìžë¦¬ìˆ˜ì™€ nì˜ í•© -> nì€ d(n)ì˜ ì œë„¤ë ˆì´í„°(generator)
+// ì œë„¤ë ˆì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ìˆ˜ : ì…€í”„ ë„˜ë²„ (self - number) -> d(n)ê°’ì„ ê°€ì§€ì§€ ì•ŠëŠ” ê²ƒ
+// 1 ì´ìƒ 5000 ë¯¸ë§Œì˜ ëª¨ë“  ìžì—°ìˆ˜ ì¤‘ ì…€í”„ ë„˜ë²„ë“¤ì˜ í•© êµ¬í•˜ê¸°
 
-// ¾Ë°í¸®Áò ¼³°è °úÁ¤ : 
-// 1. Á¦³×·¹ÀÌÅÍ ±¸ÇÏ´Â ÇÔ¼ö ±¸Çö
-// 2. 1 ~ 5000°¡ µé¾î ÀÖ´Â ¼¿ÇÁ ³Ñ¹öÀÎÁö ¾Æ´ÑÁö ÆÇº°ÇÒ ¼ö ÀÖ´Â ÀÚ·á±¸Á¶¸¦ »ý¼º <int, bool>
-// 3. ¹Ýº¹¹®À¸·Î dÇÔ¼ö¸¦ ÀÌ¿ëÇÏ¿© 1 ~ 5000À» Á¦³×·¹ÀÌÅÍ·Î ÇÏ´Â ¼ö¸¦ ±¸ÇÑ´Ù.
-// 4. 1 ~ 5000 Áß 3¹ø °úÁ¤¿¡¼­ ±¸ÇÑ °ªµé Áß ÇÑ ¹øµµ °ªÀÌ ³ª¿ÀÁö ¾ÊÀº°Ç ¼¿ÇÁ ³Ñ¹ö
+// ì•Œê³ ë¦¬ì¦˜ ì„¤ê³„ ê³¼ì • : 
+// 1. ì œë„¤ë ˆì´í„° êµ¬í•˜ëŠ” í•¨ìˆ˜ êµ¬í˜„
+// 2. 1 ~ 5000ê°€ ë“¤ì–´ ìžˆëŠ” ì…€í”„ ë„˜ë²„ì¸ì§€ ì•„ë‹Œì§€ íŒë³„í•  ìˆ˜ ìžˆëŠ” ìžë£Œêµ¬ì¡°ë¥¼ ìƒì„± <int, bool>
+// 3. ë°˜ë³µë¬¸ìœ¼ë¡œ dí•¨ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ 1 ~ 5000ì„ ì œë„¤ë ˆì´í„°ë¡œ í•˜ëŠ” ìˆ˜ë¥¼ êµ¬í•œë‹¤.
+// 4. 1 ~ 5000 ì¤‘ 3ë²ˆ ê³¼ì •ì—ì„œ êµ¬í•œ ê°’ë“¤ ì¤‘ í•œ ë²ˆë„ ê°’ì´ ë‚˜ì˜¤ì§€ ì•Šì€ê±´ ì…€í”„ ë„˜ë²„
 
 // Tip 
-// Set ÀÚ·á±¸Á¶¸¦ È°¿ëÇÏÀÚ... 
+// Set ìžë£Œêµ¬ì¡°ë¥¼ í™œìš©í•˜ìž... 
 
 set<int> set_numbers;
 
@@ -50,7 +50,7 @@ int main()
 		if (find == set_numbers.end()) sum += i;
 	}
 
-	cout << "°á°ú : " << sum;
+	cout << "ê²°ê³¼ : " << sum;
 
 	return sum;
 }
