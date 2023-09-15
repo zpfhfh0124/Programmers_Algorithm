@@ -66,13 +66,16 @@ int main()
 {
     int line;
     cin >> line;
+    cin.clear();
 
     string inst;
     vector<string> insts;
 
-    for (int i = 0; i < line; i++)
+    for (int i = 0; i <= line; i++)
     {
-        cin >> inst;
+        // 직전에 cin으로 받은 입력값이 있어서 inst 입력안받고 빈 문자열이 들어가는걸로 시작됨
+        // 그래서 line 수보다 한번 더 입력을 받도록 일단 수정
+        getline(cin, inst);
         insts.push_back(inst);
     }
 
